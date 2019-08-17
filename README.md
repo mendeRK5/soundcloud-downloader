@@ -1,4 +1,3 @@
-# soundcloud-downloader
 Don't forget to install this, bro so that it can run smoothly
 ## install
 <br>apt-get install curl</br>
