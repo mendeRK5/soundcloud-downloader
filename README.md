@@ -1,2 +1,3 @@
 # soundcloud-downloader
-hm okay download music with tools version cli be like :v
+Don't forget to install this, bro
+<br>apt-get install curl</br>
