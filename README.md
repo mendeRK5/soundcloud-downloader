@@ -1,4 +1,4 @@
-Note
+<br>Note :</br>
 Don't forget to install this, bro so that it can run smoothly
 if there is a problem please ask me yes
 ## screenshot
@@ -14,4 +14,3 @@ apt-get install python2
 ## follow :
 <br>IG :https://instagram.com/widhisec</br>
 TE :https://t.me/CockcokCrazy</br>
-___________________________________________
