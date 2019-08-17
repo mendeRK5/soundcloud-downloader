@@ -21,7 +21,7 @@ apireq(){
      -H 'referer: https://sounddownmp3.com/' --data "url=$v" --compressed)
         sum=$(echo -e "$okx" | grep -oP 'value="\K[^"]+' | tail -1)
       nm=$(echo -e "$okx" | grep -oP 'value="\K[^"]+' | head -1)
-          nme=$(echo $nm | bash e)
+          nme=$(echo $nm | bash URL.sh)
   soso=$(curl --silent 'https://sounddownmp3.com/down.php' \
   -H 'content-type: application/x-www-form-urlencoded' \
   -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36' \
