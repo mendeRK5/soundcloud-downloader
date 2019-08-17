@@ -1,7 +1,7 @@
 # soundcloud-downloader
 Don't forget to install this, bro
-----------------------------------
+so that it can run smoothly
 <br>apt-get install curl</br>
-<br>apt-get install jq</br>
-<br>apt-get install grep</br>
-<br>apt-get install wget</br>
+apt-get install jq</br>
+apt-get install grep</br>
+apt-get install wget</br>
