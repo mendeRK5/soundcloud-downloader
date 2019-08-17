@@ -49,7 +49,7 @@ scrap(){
     curl -s --request GET "https://api-v2.soundcloud.com/search?q=$oxe&variant_ids=&facet=model&user_id=102536-30194-471994-524034&client_id=7OzdeoyYOqcZHL6WPjwCS3HqdkgjvKID&limit=$page&offset=0&linked_partitioning=1&app_version=1565955166&app_locale=en" \
      -A 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36' | grep -Po '(?<=title":")[^"]*' >> njir
 file=njir
-# set field separator to a single white space 
+# set field separator
 while IFS=' ' read f1
 do
 echo -e "${GREEN}\t[*] ${NORMAL}: $f1"  
@@ -74,7 +74,7 @@ echo -e "
 printf "          powered by zsecc0de-crew.id\n"
 echo -n "${NORMAL}query :"; read ii
 echo -n "${NORMAL}pages :"; read page
-oxe=$(echo $ii | bash e)
+oxe=$(echo $ii | bash URL.sh)
 scrap
 echo -n "${RED}[?] ${NORMAL}NOMER  -> "; read pilih
 echo -n "${RED}[?] ${NORMAL}OUTPUT ->"; read out
