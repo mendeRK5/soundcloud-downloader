@@ -4,3 +4,4 @@ Don't forget to install this, bro so that it can run smoothly
 apt-get install jq</br>
 apt-get install grep</br>
 apt-get install wget</br>
+apt-get install python2
