@@ -9,3 +9,4 @@ apt-get install python2
 ```
 # follow
 <br> IG :https://instagram.com/widhisec </br>
+<br> TE :https://t.me/CokcockCrazy</br>
