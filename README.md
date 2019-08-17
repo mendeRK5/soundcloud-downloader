@@ -14,3 +14,4 @@ apt-get install python2
 ## follow :
 IG :https://instagram.com/widhisec</br>
 TE :https://t.me/CockcokCrazy</br>
+IG :https://instagram.com/widhisec</br>
