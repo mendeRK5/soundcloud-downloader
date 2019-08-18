@@ -2,7 +2,7 @@
 Don't forget to install this, bro so that it can run smoothly
 if there is a problem please ask me yes<br>
 ## screenshot
-![image](https://raw.githubusercontent.com/widhisec/soundcloud-downloader/master/OK.png)
+![image](https://raw.githubusercontent.com/widhisec/soundcloud-downloader/master/SS.png)
 ## how to install :
 ```
 apt-get install curl
