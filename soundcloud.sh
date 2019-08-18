@@ -74,7 +74,7 @@ echo -e "
 printf "          powered by zsecc0de-crew.id\n"
 echo -n "${NORMAL}query :"; read ii
 echo -n "${NORMAL}pages :"; read page
-oxe=$(echo $ii | bash e)
+oxe=$(echo $ii | bash URL.sh)
 scrap
 echo -n "${RED}[?] ${NORMAL}NOMER  -> "; read pilih
 echo -n "${RED}[?] ${NORMAL}OUTPUT ->"; read out
