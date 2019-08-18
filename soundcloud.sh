@@ -9,7 +9,7 @@ apireq(){
    grab=$(echo -e "$ok" | grep -Po '(?<=permalink_url":")[^"]*' | grep -o "https://soundcloud.com/.*/.*")
      num=$(echo -e "$grab" | grep -n "")
        z=$(printf '%s' "$num")
-       ok=$(echo $z | grep -n "" | grep -o "$pilih:.*" | grep -n "" | grep -o "$pilih:.*" | head -1 | gawk '{ print $1 }' | grep -Eo "(http|https)://[a-zA-Z0-9./?].*")
+       ok=$(echo $z | grep -n "" | grep -o "$pilih:.*" | grep -n "" | gawk '{ print $1 }' | grep -Eo "(http|https)://[a-zA-Z0-9./?].*")
         v=$(printf '%s' "$ok")
      okx=$(curl --silent 'https://sounddownmp3.com/down.php' \
      -H 'authority: sounddownmp3.com' \
@@ -21,7 +21,7 @@ apireq(){
      -H 'referer: https://sounddownmp3.com/' --data "url=$v" --compressed)
         sum=$(echo -e "$okx" | grep -oP 'value="\K[^"]+' | tail -1)
       nm=$(echo -e "$okx" | grep -oP 'value="\K[^"]+' | head -1)
-          nme=$(echo $nm | bash URL.sh)
+          nme=$(echo $nm | bash e)
   soso=$(curl --silent 'https://sounddownmp3.com/down.php' \
   -H 'content-type: application/x-www-form-urlencoded' \
   -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36' \
@@ -49,7 +49,7 @@ scrap(){
     curl -s --request GET "https://api-v2.soundcloud.com/search?q=$oxe&variant_ids=&facet=model&user_id=102536-30194-471994-524034&client_id=7OzdeoyYOqcZHL6WPjwCS3HqdkgjvKID&limit=$page&offset=0&linked_partitioning=1&app_version=1565955166&app_locale=en" \
      -A 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36' | grep -Po '(?<=title":")[^"]*' >> njir
 file=njir
-# set field separator
+# set field separator to a single white space 
 while IFS=' ' read f1
 do
 echo -e "${GREEN}\t[*] ${NORMAL}: $f1"  
@@ -74,7 +74,7 @@ echo -e "
 printf "          powered by zsecc0de-crew.id\n"
 echo -n "${NORMAL}query :"; read ii
 echo -n "${NORMAL}pages :"; read page
-oxe=$(echo $ii | bash URL.sh)
+oxe=$(echo $ii | bash e)
 scrap
 echo -n "${RED}[?] ${NORMAL}NOMER  -> "; read pilih
 echo -n "${RED}[?] ${NORMAL}OUTPUT ->"; read out
