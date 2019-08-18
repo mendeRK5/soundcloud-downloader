@@ -11,6 +11,7 @@ apt-get install grep
 apt-get install wget
 apt-get install python2
 ```
+Copyright © 2019, Widhisec - Zsecc0de-Crew.id
 ## follow :
 IG :https://instagram.com/widhisec</br>
 TE :https://t.me/CockcokCrazy</br>
