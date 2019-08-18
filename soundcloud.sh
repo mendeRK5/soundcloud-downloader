@@ -47,7 +47,7 @@ scrap(){
  #printf "$ok" >> s
      #cat s | cut -d ">" -f2 >> njir
     curl -s --request GET "https://api-v2.soundcloud.com/search?q=$oxe&variant_ids=&facet=model&user_id=102536-30194-471994-524034&client_id=7OzdeoyYOqcZHL6WPjwCS3HqdkgjvKID&limit=$page&offset=0&linked_partitioning=1&app_version=1565955166&app_locale=en" \
-     -A 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36' | grep -Po '(?<=title":")[^"]*' >> njir
+     -A 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36' | grep -Po '(?<="permalink_url":")[^"]*' | grep -o "https://soundcloud.com/.*/.*" >> njir
 file=njir
 # set field separator to a single white space 
 while IFS=' ' read f1
