@@ -20,14 +20,14 @@ apireq(){
       -H 'origin: https://scdownloader.io' \
       -H 'upgrade-insecure-requests: 1' \
       -H 'content-type: application/x-www-form-urlencoded' \
-      -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36' \
+      -A 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36' \
       -H 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3' \
       -H 'sec-fetch-site: same-origin' \
       -H 'referer: https://scdownloader.io/' \
       -H 'accept-encoding: gzip, deflate, br' \
       -H "cookie: __cfduid=$test1 PHPSESSID=$test" \
       -H 'accept-language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7' --data "url=${v}&token=$tok" --compressed | grep -Po '<a href="\K.*?(?=".*)' | grep "download")
-      downlodgan=$(echo "$oaoaoa")
+      downlodgan=$(echo "${oaoaoa}")
       curl --silent "https://scdownloader.io${downlodgan}" -H 'authority: scdownloader.io' -H 'upgrade-insecure-requests: 1' -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36' -H 'sec-fetch-mode: navigate' -H 'sec-fetch-user: ?1' -H 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3' -H 'sec-fetch-site: same-origin' -H 'referer: https://scdownloader.io/download.html' -H 'accept-encoding: gzip, deflate, br' -H 'accept-language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7' \
       -H "cookie: __cfduid=$test1 PHPSESSID=$test" --compressed --output "$out.mp3"
 cod=$(curl 'https://www.aconvert.com/audio' --silent -L \
@@ -77,7 +77,7 @@ echo -e "
 printf "          powered by zsecc0de-crew.id\n"
 echo -n "${NORMAL}query :"; read ii
 echo -n "${NORMAL}pages :"; read page
-oxe=$(echo $ii | bash URL.sh)
+oxe=$(echo $ii | bash e)
 scrap
 echo -n "${RED}[?] ${NORMAL}NOMER  -> "; read pilih
 echo -n "${RED}[?] ${NORMAL}OUTPUT ->"; read out
